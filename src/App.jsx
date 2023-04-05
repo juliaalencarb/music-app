@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Home, About, Music } from './pages';
 import './App.css';
-import { Discography } from './components';
+import { Discography, NavBar } from './components';
+import {Routes, Route} from 'react-router-dom';
 
 
 export default function App() {
@@ -85,11 +87,18 @@ export default function App() {
   ])
 
   return (
-    <>
-      <header>Ghost 👻</header>
-      <span>Hard rock, heavy metal, doom metal, pop rock, progressive rock, psychedelic rock</span>
-      <p>Ghost is a Swedish rock band that was formed in Linköping in 2006. In 2010, they released a three-track demo followed by a 7-inch vinyl titled "Elizabeth", and later their debut full-length album Opus Eponymous. The song "Ritual" was chosen by Kerrang! as one of "The 50 Most Evil Songs Ever."</p>
-      <Discography albums= { albums } setLikedMusic={ setLikedMusic }/>
-    </>
+    <div>
+      <Routes>
+        <Route path='/' element={<NavBar />} >
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/music' element={ <Music /> } />
+          </Route>
+          <Route path='*' element={<h1>404 Not Found</h1>}></Route>
+      </Routes>
+    </div>
   )
 }
+
+
+// {<Discography albums= { albums } setLikedMusic={ setLikedMusic }/>}

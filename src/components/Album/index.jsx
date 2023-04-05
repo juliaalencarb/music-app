@@ -1,6 +1,11 @@
 import Accordion from 'react-bootstrap/Accordion';
 
 export default function Album({ handleLike, albums }) {
+
+    async function getLyrics(songTitle) {
+        const lyrics = await fetch(`https://api.lyrics.ovh/v1/ghost/${songTitle}`)
+    }
+
     return (
         <>
             {albums.map(album => (
