@@ -7,10 +7,14 @@ export default function Music() {
 
     const { albums, setLikedMusic } = useAlbums();
 
-    async function getLyrics(songTitle) {
+    useEffect(() => {
+        async function getLyrics(songTitle) {
 
-        const lyrics = await fetch(`https://api.lyrics.ovh/v1/ghost/${songTitle}`)
-    }
+            const res = await fetch(`https://api.vagalume.com.br/search.php?art=ghost&mus=${songTitle}&apikey=e19e41474ed897f08530acbc527ef419`)
+            const lyrics = await res.json();
+            console.log(lyrics.mus[0].text)
+        }
+    }, [])
 
     function handleLike(albumId, song) {
         const mutatedAlbums = albums.map((album, index) => {
@@ -37,7 +41,7 @@ export default function Music() {
                             <Accordion.Item eventKey={song.track + "." + album.id}>
                                 <Accordion.Header>{song.liked ? "❤️" : " "}{song.track} - {song.title}</Accordion.Header>
                                 <Accordion.Body>
-                                    Some text.
+                                    Lyrics will be here.
                                     <button onClick={() => handleLike(album.id, song)}>Like</button>
                                 </Accordion.Body>
                             </Accordion.Item>

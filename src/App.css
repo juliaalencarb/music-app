@@ -1,4 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Assistant:regular,bold,italic&subset=latin,latin-ext');
+
 img {
     width: 250px;
     height: 250px;
+}
+
+.homepage-title {
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    font-family: Comfortaa;
+    font-size: 500%;
+    background-color: transparent;
+}
+
+.text-container {
+    padding: 5% 20%;
+    align-items: center;
+    text-align: center;
+}
+
+.music-style {
+    font-size: medium;
+}
+
+.description {
+    padding: 2em;
+}
+
+.accordion-button {
+    color: #ffffff;
+    background-color: #212529;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #212529;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+* {
+    text-align: center;
+    background-color: #212529;
+    color: white;
+    font-family: Assistant;
 }
