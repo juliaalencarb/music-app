@@ -9,11 +9,11 @@ function NavBar() {
         <>
         <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Ghost</Navbar.Brand>
+          <Navbar.Brand href="/">Ghost</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link to='/' href="#home">Home</Nav.Link>
-            <Nav.Link to='/about' href="#features">About</Nav.Link>
-            <Nav.Link to='/music' href="#pricing">Music</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/music">Music</Nav.Link>
           </Nav>
         </Container>
         </Navbar>

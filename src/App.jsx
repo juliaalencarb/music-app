@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import { Home, About, Music } from './pages';
 import './App.css';
 import { Discography, NavBar } from './components';
 import {Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
 
 
 export default function App() {
