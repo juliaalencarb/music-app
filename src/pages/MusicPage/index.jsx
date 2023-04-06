@@ -12,6 +12,19 @@ export default function Music() {
         const lyrics = await fetch(`https://api.lyrics.ovh/v1/ghost/${songTitle}`)
     }
 
+    function handleLike(albumId, song) {
+        const mutatedAlbums = albums.map((album, index) => {
+          if (index === albumId - 1) {
+            let songState = albums[index].songs.find(chosenSong => chosenSong.track == song.track);
+            songState.liked = !songState.liked;
+            return album;
+          } else {
+            return album;
+          }
+        });
+        setLikedMusic(mutatedAlbums)
+    };
+
     return (
         <>
             {albums.map(album => (

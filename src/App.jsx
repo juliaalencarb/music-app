@@ -1,6 +1,6 @@
 import { Home, About, Music } from './pages';
 import './App.css';
-import { Discography, NavBar } from './components';
+import { NavBar } from './components';
 import {Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
 import { AlbunsProvider } from './contexts';
