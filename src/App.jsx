@@ -87,16 +87,15 @@ export default function App() {
   ])
 
   return (
-    <div>
       <Routes>
         <Route path='/' element={<NavBar />} >
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/music' element={ <Music /> } />
+        </Route>
+          <Route path='*' element={<h1>404 Not Found</h1>}>
           </Route>
-          <Route path='*' element={<h1>404 Not Found</h1>}></Route>
       </Routes>
-    </div>
   )
 }
 

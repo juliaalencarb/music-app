@@ -17,7 +17,8 @@ function NavBar() {
           </Nav>
         </Container>
         </Navbar>
-        </>
+      <Outlet />
+      </>
     )
 }
 
